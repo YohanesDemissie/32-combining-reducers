@@ -29,7 +29,7 @@ class CategoryItem extends React.Component {
     return(
       <li className='category-item'
         onDoubleClick={this.handleEditing}>
-        <p>{this.props.category.title}</p>
+        <h1>{this.props.category.title}</h1>
         <p>{this.props.category.budget}</p>
         <button onClick={this.handleDelete}>Delete</button>
         {this.state.editing ?
