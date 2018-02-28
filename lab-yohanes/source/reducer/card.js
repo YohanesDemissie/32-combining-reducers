@@ -10,10 +10,13 @@ export default (state = initialState, action) => {
     delete state[payload._id];
     return  changedState;
   }
-  case 'CARD_CREATE' : return;
-  case 'CARD_UPDATE' : return;
-  case 'CARD_DELETE' : return;
-  case 'CARD_RESET' : return initialState;
+  case 'CARD_CREATE' : {
+    let categoryState = state;
+    categoryState[payload._id] = categoryState[payload._id].push(payload);
+    return {...categoryState};}
+  // case 'CARD_UPDATE' : return;
+  // case 'CARD_DELETE' : return;
+  // case 'CARD_RESET' : return initialState;
   default: return state;
   }
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {categoryCreate, categoryUpdate, categoryDelete} from '../../actions/category-actions';
 import CategoryForm from '../category/category-form/category-form';
+import CategoryItem from '../category/category-item/category-item';
 
 class Dashboard extends React.Component {
   render() {

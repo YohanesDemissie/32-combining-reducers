@@ -18,3 +18,7 @@ redux allowa the dev to control what responses are dipatched once the request is
 console.group()
 console.info()
 console.end()
+
+renderIf : is like a validation method; only rendering if there is content/value and not undefined or null
+
+cards file holds the Id's

@@ -1,4 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {cardUpdate} from '../../../actions/card-actions';
+import {cardDelete} from '../../../actions/card-actions';
 
 class CardItem extends React.Cmponent {
   constructor(props) {
@@ -22,5 +25,6 @@ class CardItem extends React.Cmponent {
 let mapStateToProps = () => ({});
 let mapDispatchToProps = (dispatch, getState) => ({
   cardUpdate : card => dispatch(cardUpdate(card)),
+  cardDelete: card => dispatch(cardDelete(card)),
 });
-export default CardItem;
+export default connect(mapStateToProps, mapDispatchToProps(CardItem));

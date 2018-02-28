@@ -1,5 +1,5 @@
 import React from 'react';
-//this file is incomplete
+
 class CardForm extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +8,7 @@ class CardForm extends React.Component {
       this.props.card :
       {
         categoryId: this.props.categoryId,
-        tilte: '',
+        title: '',
 
       };
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +21,8 @@ class CardForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.onComplete(this);
+    this.props.onComplete(this.state);
+    this.setState({title: ''});
   }
 
   render() {
@@ -30,7 +31,7 @@ class CardForm extends React.Component {
         <input
           type="text"
           name="title"
-          placeholder="card-holder"
+          placeholder="card-form"
           value={this.state.title}
           onChange={this.handleChange}/>
       </form>
