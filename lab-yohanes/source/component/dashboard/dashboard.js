@@ -31,7 +31,8 @@ class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => ({ //map redux to props of this component
-  categories: state,
+  categories: state.categories, //state is complete store in redux with a .cards and .categories
+  cards: state.cards,
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({ //maps to update state of the props of this component

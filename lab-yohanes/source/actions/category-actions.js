@@ -1,4 +1,4 @@
-//define what we de=isbatch to reducers
+//define what we dispatch to reducers
 import uuid from 'uuid/v4';
 
 
