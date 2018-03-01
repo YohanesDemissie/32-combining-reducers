@@ -4,7 +4,11 @@ export default (state = initialState, action) => {
   let {type, payload} = action;
 
   switch(type) { //type of action
-  case 'CATEGORY_CREATE': return {...state, [payload._id]: []};
+  //case 'CATEGORY_CREATE': return {...state, [payload._id]: []};
+  case 'CATEGORY_CREATE':
+    if(payload.title === '')
+      throw new Error('Category can not be Empty');
+    return {...state, [payload._id]: []};
   case 'CATEGORY_DELETE': {
     let categoryState = state;
     delete categoryState[payload._id];

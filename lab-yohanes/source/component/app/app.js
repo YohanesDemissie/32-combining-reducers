@@ -7,13 +7,9 @@ import {BrowserRouter, Route} from 'react-router-dom';
 const store = createAppStore(); //works with our provider to wrap with
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   componentDidMount() {//triggered on page load
-  // store.subscribe(() => console.log('__STATE__:', store.getState())); //go to the store, listen to state and log out all states
-    //store.dispatch({type: null});
+    store.subscribe(() => console.log('__STATE__:', store.getState())); //go to the store, listen to state and log out all states
+    store.dispatch({type: null});
   }
   render() {
     return (

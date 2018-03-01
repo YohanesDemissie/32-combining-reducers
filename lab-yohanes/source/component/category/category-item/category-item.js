@@ -12,14 +12,14 @@ class CategoryItem extends React.Component {
     super(props);
     this.state = {
       category: this.props.category ? this.props.category : {},
-      editing: false,
+      editing: true,
     };
 
     this.handleEditing = this.handleEditing.bind(this);
   }
 
   handleEditing() {
-    this.setState({editing: !this.state.editing});
+    this.setState({editing: this.state.editing});
   }
 
   render() {
