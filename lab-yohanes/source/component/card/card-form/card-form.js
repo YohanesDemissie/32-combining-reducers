@@ -38,3 +38,5 @@ class CardForm extends React.Component {
     );
   }
 }
+
+export default CardForm;

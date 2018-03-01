@@ -3,15 +3,15 @@ import React from 'react';
 class CategoryForm extends React.Component {
   constructor(props) {
     super(props);
-    //  this.state = {
-    //    title: props.category ? props.category.title : '',
-    //  }
-    this.state = this.props.category ?
-      this.props.category :
-      {
-        title: '',
-        budget: '',
-      };
+    this.state = {
+      title: props.category ? props.category.title : '',
+    };
+    // this.state = this.props.category ?
+    //   this.props.category :
+    //   {
+    //     title: '',
+    //     budget: '',
+    //   };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -23,10 +23,10 @@ class CategoryForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // this.props.onComplete(Object.assign({}, this.state))
-    // this.setState({title: ''})
-    this.props.onComplete(this.state); //this is sent to our wrapper created in dashboard.js
-    this.setState({title: '', budget: ''});
+    this.props.onComplete(Object.assign({}, this.state));
+    this.setState({title: ''});
+    // this.props.onComplete(this.state); //this is sent to our wrapper created in dashboard.js
+    // this.setState({title: '', budget: ''});
     if(this.props.buttonText === 'update') this.props.toggleEdit();
   }
   render() {

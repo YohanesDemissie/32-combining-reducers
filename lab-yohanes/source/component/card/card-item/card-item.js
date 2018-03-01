@@ -1,13 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {cardUpdate} from '../../../actions/card-actions';
-import {cardDelete} from '../../../actions/card-actions';
+import CardForm from '../card-form/card-form';
+import {cardUpdate, cardDelete} from '../../../actions/card-actions';
 
-class CardItem extends React.Cmponent {
-  constructor(props) {
-    super(props);
-  }
-
+class CardItem extends React.Component {
   render() {
     return(
       <section id={this.props.card._id}>

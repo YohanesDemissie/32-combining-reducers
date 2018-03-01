@@ -1,5 +1,6 @@
 import uuid from 'uuid/v4';
-let cardCreate = card => {
+
+export const cardCreate = card => {
   card._id = uuid();
   card.timeStamp = new Date();
   return {
@@ -7,14 +8,17 @@ let cardCreate = card => {
     payload: card,
   };
 };
-let cardUpdate = card => ({
+
+export const cardUpdate = card => ({
   type: 'CARD_UPDATE',
   payload: card,
 });
-let cardDelete = card => ({
+
+export const cardDelete = card => ({
   type: 'CARD_DELETE',
   payload: card,
 });
-let cardReset = card => ({
+
+export const cardReset = card => ({
   type: 'CARD_RESET',
 });
