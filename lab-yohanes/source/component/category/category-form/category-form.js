@@ -3,15 +3,13 @@ import React from 'react';
 class CategoryForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: props.category ? props.category.title : '',
-    };
-    // this.state = this.props.category ?
-    //   this.props.category :
-    //   {
-    //     title: '',
-    //     budget: '',
-    //   };
+
+    this.state = this.props.category ?
+      this.props.category :
+      {
+        title: '',
+        budget: '',
+      };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -37,6 +35,13 @@ class CategoryForm extends React.Component {
           name="title"
           placeholder="title"
           value={this.state.title}
+          onChange={this.handleChange}/>
+
+        <input
+          type="text"
+          name="budget"
+          placeholder="budget"
+          value={this.state.budget}
           onChange={this.handleChange}/>
 
         <button type="submit">{this.props.buttonText}</button>

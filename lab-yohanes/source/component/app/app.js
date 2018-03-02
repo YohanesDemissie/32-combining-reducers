@@ -4,6 +4,7 @@ import createAppStore from '../../lib/store'; //tie somethings together into a s
 import Dashboard from '../dashboard/dashboard';
 import {BrowserRouter, Route} from 'react-router-dom';
 
+
 const store = createAppStore(); //works with our provider to wrap with
 
 class App extends React.Component {
@@ -16,7 +17,7 @@ class App extends React.Component {
       <main className="application">
         <Provider store={store}>
           <BrowserRouter>
-            <Route exact path="/" component={Dashboard}/>
+            <Route exact path="/" component={Dashboard}></Route>
           </BrowserRouter>
         </Provider>
       </main>

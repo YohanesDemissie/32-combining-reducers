@@ -25,6 +25,10 @@ class CategoryItem extends React.Component {
     this.props.handleDelete(this.state.category);
   }
 
+  handleUpdate() {
+    this.props.handleUpdate.bind(this);
+  }
+
   render() {
     return(
       <li className='category-item'

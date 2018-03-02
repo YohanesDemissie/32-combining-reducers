@@ -21,19 +21,19 @@ console.end()
 
 renderIf : is like a validation method; only rendering if there is content/value and not undefined or null
 
-cards file holds the Id's
+expenses file holds the Id's
 
 categories holds Id, title and timestamp as a key value pair within an array.
 
-the card holds the ID
+the expense holds the ID
 
 __DISPATCHING__ holds the type, payload, timestamp, title, id_
 payload: holds the time stamp, title and
-__STATE___ holds cards and caregories as key value pairs
-the cards hold the unique Id
+__STATE___ holds expenses and caregories as key value pairs
+the expenses hold the unique Id
 categories same content as dispatch i think
 
 __NEXT_STATE__
-holds cards and categories as keyvalue pairs
-the cards contain an object ID
+holds expenses and categories as keyvalue pairs
+the expenses contain an object ID
 categories hold title, id and time stamp in one object
