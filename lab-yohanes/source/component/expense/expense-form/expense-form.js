@@ -11,6 +11,7 @@ class ExpenseForm extends React.Component {
         title: '',
         price: '',
       };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,6 +22,7 @@ class ExpenseForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+
     this.props.onComplete(this.state);
     this.setState({title: '', price: '', categoryId: this.props.categoryId}); //communicates with state constructor above onComplete/this.state
 

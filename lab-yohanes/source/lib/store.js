@@ -5,6 +5,6 @@ import reduxReporter from '../middleware/redux-reporter';
 import crashReporter from '../middleware/crash-reporter';
 import reduxSession from '../middleware/redux-sesion';
 
-//export default () => createStore(reducer);
-export default() => createStore(reducer, composeWithDevTools(applyMiddleware(reduxReporter, crashReporter, reduxSession)
-));
+export default () => createStore(reducer);
+// export default() => createStore(reducer, composeWithDevTools(applyMiddleware(reduxReporter, crashReporter, reduxSession)
+// ));

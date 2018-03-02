@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
     // delete state[payload._id];
     // return  changedState;
   }
-  case 'CARD_CREATE' : {
+  case 'EXPENSE_CREATE' : {
     let categoryState = state;
     categoryState[payload._id] = categoryState[payload._id].push(payload);
     return {...categoryState};}

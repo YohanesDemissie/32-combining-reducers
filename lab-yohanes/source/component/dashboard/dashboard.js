@@ -5,6 +5,10 @@ import CategoryForm from '../category/category-form/category-form';
 import CategoryItem from '../category/category-list/category-list';
 
 class Dashboard extends React.Component {
+  // componentWillReceiveProps(){
+  //   console.log(this.props);
+    
+  // }
   render() {
     return (
       <section>
@@ -18,8 +22,8 @@ class Dashboard extends React.Component {
           this.props.categories.map(cat =>
             <CategoryItem key={cat._id}
               category={cat}
-              handleDelete={this.props.dashboardCategoryDelete}
-              handleUpdate={this.props.dashboardCategoryUpdate}
+              // handleDelete={this.props.dashboardCategoryDelete}
+              // handleUpdate={this.props.dashboardCategoryUpdate}
             />)
           :
           undefined
@@ -34,8 +38,8 @@ const mapStateToProps = state => ({ //map redux to props of this component
 
 const mapDispatchToProps = (dispatch, getState) => ({
   dashboardCategoryCreate: category => dispatch(categoryCreate(category)), //create a function passing category(passed in on our forms) as the arg. pass through our action of category create(thats gonna give us an ID and time stamp). the type and payload is passed to dispatch which handles that to a reducer which then updates to the store and this.props.category gives us updates on the state
-  dashboardCategoryDelete: category => dispatch(categoryDelete(category)), //create a function passing category(passed in on our forms) as the arg. pass through our action of category create(thats gonna give us an ID and time stamp). the type and payload is passed to dispatch which handles that to a reducer which then updates to the store and this.props.category gives us updates on the state
-  dashboardCategoryUpdate: category => dispatch(categoryUpdate(category)), //create a function passing category(passed in on our forms) as the arg. pass through our action of category create(thats gonna give us an ID and time stamp). the type and payload is passed to dispatch which handles that to a reducer which then updates to the store and this.props.category gives us updates on the state
+  // dashboardCategoryDelete: category => dispatch(categoryDelete(category)), //create a function passing category(passed in on our forms) as the arg. pass through our action of category create(thats gonna give us an ID and time stamp). the type and payload is passed to dispatch which handles that to a reducer which then updates to the store and this.props.category gives us updates on the state
+  // dashboardCategoryUpdate: category => dispatch(categoryUpdate(category)), //create a function passing category(passed in on our forms) as the arg. pass through our action of category create(thats gonna give us an ID and time stamp). the type and payload is passed to dispatch which handles that to a reducer which then updates to the store and this.props.category gives us updates on the state
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard); //i want to dispatch and attatch to these componenets

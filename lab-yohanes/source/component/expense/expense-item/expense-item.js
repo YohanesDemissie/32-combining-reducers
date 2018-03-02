@@ -2,7 +2,7 @@ import React from 'react';
 import {renderIf} from '../../../lib/utils';
 import {connect} from 'react-redux';
 import expenseForm from '../expense-form/expense-form';
-import {expenseUpdate, expenseDelete} from '../../../actions/expense-actions';
+import {expenseUpdate, expenseDelete, expenseCreate} from '../../../actions/expense-actions';
 
 class ExpenseItem extends React.Component {
   constructor(props) {
@@ -52,6 +52,7 @@ class ExpenseItem extends React.Component {
 
 let mapStateToProps = () => ({});
 let mapDispatchToProps = (dispatch, getState) => ({
+  expenseCreate: expense => dispatch(expenseCreate(expense)),
   expenseUpdate : expense => dispatch(expenseUpdate(expense)),
   expenseDelete: expense => dispatch(expenseDelete(expense)),
 });

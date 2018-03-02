@@ -2,6 +2,7 @@ import uuid from 'uuid/v4';
 
 export const expenseCreate = expense => {
   expense._id = uuid();
+  console.log(expense, 'SOMETHING TO SEE');
   expense.timeStamp = new Date();
   return {
     type: 'expense_CREATE',
