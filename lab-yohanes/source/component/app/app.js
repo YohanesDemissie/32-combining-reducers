@@ -3,6 +3,7 @@ import {Provider} from 'react-redux'; //we are gonna wrap somethings around it a
 import createAppStore from '../../lib/store'; //tie somethings together into a store and give me a new application state
 import Dashboard from '../dashboard/dashboard';
 import {BrowserRouter, Route} from 'react-router-dom';
+import UIChallenge from '../ui-challenge/ui-challenge';
 
 
 const store = createAppStore(); //works with our provider to wrap with
@@ -13,14 +14,17 @@ class App extends React.Component {
     store.dispatch({type: null});
   }
   render() {
-    return (
-      <main className="application">
+    return (//only have one child container between  broweser router and route
+      <div className="application">
         <Provider store={store}>
           <BrowserRouter>
-            <Route exact path="/" component={Dashboard}></Route>
+            <section>
+              <Route exact path="/" component={Dashboard}/>
+              <Route exact path="/ui-challenge" component={UIChallenge}/>
+            </section>
           </BrowserRouter>
         </Provider>
-      </main>
+      </div>
     );
   }
 }

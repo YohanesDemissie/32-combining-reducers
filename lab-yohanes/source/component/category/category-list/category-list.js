@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoryForm from '../category-form/category-form';
 import {connect} from 'react-redux';
-import {categoriesUpdate, categoryDelete} from '../../../actions/category-actions';
+import {categoryUpdate, categoryDelete} from '../../../actions/category-actions';
 
 class CategoryItem extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class CategoryItem extends React.Component {
         onDoubleClick={this.handleEditing}>
         <h1>{this.props.category.title}</h1>
         <p>{this.props.category.budget}</p>
-        <button onClick={this.handleDelete}>Delete</button>
+        <button onClick={this.props.handleDelete}>Delete</button>
         {this.state.editing ?
           <CategoryForm
             buttonText="update"
