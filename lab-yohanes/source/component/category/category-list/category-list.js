@@ -35,7 +35,7 @@ class CategoryItem extends React.Component {
         onDoubleClick={this.handleEditing}>
         <h1>{this.props.category.title}</h1>
         <p>{this.props.category.budget}</p>
-        <button onClick={this.props.handleDelete}>Delete</button>
+        <button onClick={this.handleDelete}>Delete</button>
         {this.state.editing ?
           <CategoryForm
             buttonText="update"
