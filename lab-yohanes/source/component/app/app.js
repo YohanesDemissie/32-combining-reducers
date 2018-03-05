@@ -11,7 +11,7 @@ const store = createAppStore(); //works with our provider to wrap with
 class App extends React.Component {
   componentDidMount() {//triggered on page load
     store.subscribe(() => console.log('__STATE__:', store.getState())); //go to the store, listen to state and log out all states
-    store.dispatch({type: null});
+    //store.dispatch({type: null});
   }
   render() {
     return (//only have one child container between  broweser router and route

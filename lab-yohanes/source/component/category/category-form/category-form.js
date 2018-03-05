@@ -7,7 +7,6 @@ class CategoryForm extends React.Component {
     this.state = this.props.category ?
       this.props.category :
       {
-        
         title: '',
         budget: '',
       };
@@ -24,7 +23,7 @@ class CategoryForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.onComplete(this.state);
-    this.setState({title: '', budget: ''});
+    // LAB 31 : this.setState({title: '', budget: ''});
     // this.props.onComplete(this.state); //this is sent to our wrapper created in dashboard.js
     // this.setState({title: '', budget: ''});
     if(this.props.buttonText === 'update') this.props.toggleEdit();

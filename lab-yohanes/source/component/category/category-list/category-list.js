@@ -18,7 +18,7 @@ class CategoryItem extends React.Component {
     this.handleUpdate = this.handleUpdate.bind(this);
   }
   handleEditing() {
-    this.setState({editing: this.state.editing});
+    this.setState({editing: [this.state.editing]});
   }
 
   handleDelete() {

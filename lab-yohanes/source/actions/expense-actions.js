@@ -20,6 +20,4 @@ export const expenseDelete = expense => ({
   payload: expense,
 });
 
-export const expenseReset = expense => ({
-  type: 'expense_RESET',
-});
+export const expenseReset = expense => ({type: 'expense_RESET'});
